@@ -1,42 +1,32 @@
 #########################
 # Environment Variables #
 #########################
+# Libraries
+export NODE_PATH="$HOME/Development/projects/syntech-tetra/org.syntech.es.ui/web"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$PATH:$JAVA_HOME;
-export NODE_PATH="$HOME/Development/projects/syntech-tetra/org.syntech.es.ui/web"
-# Add that to the global PATH variable
 export PATH=${JAVA_HOME}/bin:$PATH
-# Set `An`droid_HOME
 export ANDROID_HOME=~/Library/Android/sdk/
-# Add the Android SDK to the ANDROID_HOME variable
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
-# Add scripts folder to path
-export PATH=/Users/JJames/Development/scripts:$PATH
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
-PATH="/Users/jjames/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/jjames/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/jjames/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/jjames/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/jjames/perl5"; export PERL_MM_OPT;
-# Created by `pipx` on 2021-03-05 15:26:54
+export PATH="/Users/jjames/perl5/bin${PATH:+:${PATH}}"
+export PERL5LIB="/Users/jjames/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+export PERL_LOCAL_LIB_ROOT="/Users/jjames/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
+export PERL_MB_OPT="--install_base \"/Users/jjames/perl5\""
+export PERL_MM_OPT="INSTALL_BASE=/Users/jjames/perl5"
 export PATH="$PATH:/Users/jjames/.local/bin"
 
+# Add custom scripts to path
+export PATH=/Users/JJames/Development/scripts:$PATH
+
+# EDITOR
+export EDITOR="code"
 ######################
 # antigen settings #
 ######################
 source $(brew --prefix)/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
-# antigen use oh-my-zsh
-# antigen bundle git
-# antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen bundle zsh-users/zsh-autosuggestions
-# antigen bundle zsh-users/zsh-completions
-# antigen theme https://github.com/iam4x/zsh-iterm-touchbar
-# antigen theme robbyrussell
-# antigen theme jackharrisonsherlock/common
-# antigen bundle tylerreckart/hyperzsh
-# antigen apply
 
 ######################
 # oh-my-zsh settings #
@@ -45,13 +35,6 @@ export ZSH=/Users/JJames/.oh-my-zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highlighting/highlighters
 COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
-
-
-autoload -U promptinit; promptinit
-prompt pure
-# prompt spaceship
-
-
 
 
 #####################
@@ -69,8 +52,7 @@ export NVM_DIR="/Users/JJames/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## EDITOR
-export EDITOR="code"
+
 
 ##################
 # Custom Aliases #
@@ -78,10 +60,7 @@ export EDITOR="code"
 alias c="clear"
 alias cls="clear;ls -GFp"
 alias mounteng="mount_smbfs smb://jjames@syntech.org/depts/Engineer ~/engineer"
-alias zshconfig="vim ~/.zshrc"
-alias zshrefresh="source ~/.zshrc"
 alias python=/usr/local/bin/python3 
-
 
 ##################
 #  FZF Settings  #
@@ -112,3 +91,7 @@ _gen_fzf_default_opts() {
   "
 }
 _gen_fzf_default_opts
+
+# Powerline 10k cfg
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
