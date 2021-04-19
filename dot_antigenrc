@@ -9,8 +9,12 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle Tarrasch/zsh-bd
+antigen bundle tysonwolker/iterm-tab-colors
+antigen bundle MichaelAquilina/zsh-you-should-use
 
 antigen theme https://github.com/iam4x/zsh-iterm-touchbar
+
 # Select theme
 # antigen theme denysdovhan/spaceship-prompt
 antigen theme romkatv/powerlevel10k

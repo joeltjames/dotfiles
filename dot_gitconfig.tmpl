@@ -1,0 +1,11 @@
+[user]
+	name = J.T. James
+	email = {{ .email }}
+[push]
+	default = current
+[core]
+	autocrlf = input
+[alias]
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+[init]
+	defaultBranch = main
